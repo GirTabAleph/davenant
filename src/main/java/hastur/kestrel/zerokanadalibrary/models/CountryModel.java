@@ -17,7 +17,7 @@ public class CountryModel {
     @Column(name = "countryid")
     private Integer countryId;
 
-    @Column(name = "countryname", length = 100)
+    @Column(name = "countryname", length = 100, nullable = false, unique = true)
     private String name;
 
 }

@@ -1,10 +1,15 @@
 package hastur.kestrel.zerokanadalibrary.models;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
+@Entity(name = "language")
+@Table
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class LanguageModel {
 
     @Id
@@ -12,10 +17,10 @@ public class LanguageModel {
     @Column(name = "languageid")
     private Integer languageId;
 
-    @Column(name = "language", length = 30)
+    @Column(name = "language", length = 30, nullable = false, unique = true)
     private String language;
 
-    @Column(name = "languageshortcode", length = 5)
+    @Column(name = "languageshortcode", length = 5, nullable = false, unique = true)
     private String shortCode;
 
 }
