@@ -4,7 +4,6 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import java.time.LocalDate;
 
 @Entity
 @Table(name = "physicaledition")
@@ -45,7 +44,7 @@ public class PhysicalEditionModel {
     @Column(name = "editionnumber", nullable = true, unique = false)
     private int editionNumber;
 
-    @Column(name = "publicationdate", nullable = false, unique = false)
-    private LocalDate publicationDate;
+    @Column(name = "publicationyear", length = 4, nullable = true, unique = false)
+    private String publicationYear;
 
 }
