@@ -17,10 +17,6 @@ public class PhysicalEditionModel {
     @Column(name = "physicaleditionid")
     private Integer physicalEditionId;
 
-    @JoinColumn(name = "workid")
-    @OneToOne(fetch = FetchType.LAZY)
-    private WorkModel work;
-
     @JoinColumn(name = "publisherid")
     @OneToOne(fetch = FetchType.LAZY)
     private PublisherModel publisher;
@@ -37,7 +33,7 @@ public class PhysicalEditionModel {
 
     // Reserved for additional data not native to the original work,
     // such as "annotated edition", "illustrated edition", "revised second edition",
-    // et cetera.
+    // "Hainish stories vol. 1", et cetera.
     @Column(name = "editionname", length = 100, nullable = true, unique = false)
     private String editionName;
 
