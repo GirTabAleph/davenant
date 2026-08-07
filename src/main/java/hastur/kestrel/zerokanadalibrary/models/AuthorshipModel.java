@@ -15,7 +15,7 @@ public class AuthorshipModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "authorshipid")
-    private Integer authorId;
+    private Integer authorshipId;
 
     @JoinColumn(name = "workid")
     @ManyToOne(fetch = FetchType.LAZY)
