@@ -31,9 +31,10 @@ public class PhysicalEditionModel {
     @Column(name = "pagecount")
     private int pageCount;
 
-    // Reserved for additional data not native to the original work,
-    // such as "annotated edition", "illustrated edition", "revised second edition",
-    // "Hainish stories vol. 1", et cetera.
+    /*
+        Reserved for the name of the book, akin to a container. If the container (the book) contains only
+        one work the edition name is the work itself.
+    */
     @Column(name = "editionname", length = 100, nullable = true, unique = false)
     private String editionName;
 
