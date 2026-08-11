@@ -15,7 +15,7 @@ public interface AuthorRepository extends JpaRepository<AuthorModel, Integer> {
     public Optional<AuthorModel> findAuthorModelByNameAndLastName(String name, String lastName);
 
     @Query("""
-           SELECT a
+           SELECT a.authorId, a.name, a.lastName, c.name
            FROM AuthorModel a
            JOIN a.country c
            WHERE c.name = :countryName
