@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>hastur.kestrel</groupId>
-    <artifactId>zero-kanada-library</artifactId>
+    <artifactId>davenant</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>zero-kanada-library</name>
-    <description>zero-kanada-library</description>
+    <name>davenant</name>
+    <description>davenant</description>
     <url/>
     <licenses>
         <license/>
