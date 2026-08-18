@@ -1,6 +1,6 @@
-package hastur.kestrel.zerokanadalibrary.repositories;
+package hastur.kestrel.davenant.repositories;
 
-import hastur.kestrel.zerokanadalibrary.models.LanguageModel;
+import hastur.kestrel.davenant.models.LanguageModel;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,4 +1,4 @@
-package hastur.kestrel.zerokanadalibrary.models;
+package hastur.kestrel.davenant.models;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

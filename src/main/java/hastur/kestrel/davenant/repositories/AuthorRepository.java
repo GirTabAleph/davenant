@@ -1,6 +1,6 @@
-package hastur.kestrel.zerokanadalibrary.repositories;
+package hastur.kestrel.davenant.repositories;
 
-import hastur.kestrel.zerokanadalibrary.models.AuthorModel;
+import hastur.kestrel.davenant.models.AuthorModel;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
