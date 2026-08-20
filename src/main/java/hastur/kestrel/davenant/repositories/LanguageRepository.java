@@ -13,4 +13,5 @@ public interface LanguageRepository extends JpaRepository<LanguageModel, Integer
 
     public Optional<LanguageModel> findLanguageModelByShortCode(String shortCode);
 
+    public Optional<LanguageModel> findLanguageModelByLanguageId(Integer languageId);
 }
