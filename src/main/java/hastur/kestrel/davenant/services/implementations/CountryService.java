@@ -13,7 +13,6 @@ import java.util.List;
 @RequiredArgsConstructor
 public class CountryService implements ICountryService {
 
-    //Repositories for data access.
     private final CountryRepository countryRepository;
 
     @Override
