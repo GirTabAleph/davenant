@@ -8,6 +8,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
@@ -32,6 +33,13 @@ public class CountryService implements ICountryService {
         countryRepository.save(newCountry);
 
         return newCountry;
+
+    }
+
+    @Override
+    public Optional<CountryModel> getCountryByName(String name){
+
+        return countryRepository.getCountryModelByName(name);
 
     }
 
