@@ -7,12 +7,16 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
-import java.util.Optional;
 
 @Repository
 public interface AuthorRepository extends JpaRepository<AuthorModel, Integer> {
 
-    public Optional<AuthorModel> findAuthorModelByNameAndLastName(String name, String lastName);
+    @Query("""
+           SELECT a.authorId, a.name, a.lastName, a.country
+           FROM AuthorModel a
+           WHERE a.name = :name AND a.lastName = :lastName
+           """)
+    public List<AuthorModel> findAuthorModelsByNameAndLastName(@Param("name") String name, @Param("lastName")String lastName);
 
     @Query("""
            SELECT a
